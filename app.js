@@ -12,9 +12,11 @@ app.use(express.json());
 app.use("/users", usersRouter);
 app.use("/cards", cardsRouter);
 
-// Ruta raíz (opcional, para devolver 404)
+// Ruta raíz con mensaje de bienvenida
 app.get("/", (req, res) => {
-  res.status(404).json({ message: "Recurso solicitado no encontrado" });
+  res
+    .status(200)
+    .json({ message: "API de Carlos Durán funcionando correctamente 🚀" });
 });
 
 // Manejar rutas no definidas
