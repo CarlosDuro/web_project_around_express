@@ -60,8 +60,6 @@ npm run dev
 
 Ejemplo de id http://localhost:3000/users/8340d0ec33270a25f2413b69
 
-
-
 ## Dependencias principales
 
 Express — Framework para servidor HTTP.
@@ -78,6 +76,29 @@ El proyecto está pensado para ser una base simple antes de conectar con bases d
 
 El manejo de errores está implementado para rutas no encontradas y usuarios inexistentes.
 
+# Estructura del Proyecto
+
+| .editorconfig
+| .eslintrc
+| .gitignore
+| app.js
+| package-lock.json
+| package.json
+| README.md
+|
++---data
+| cards.json
+| users.json
+|
++---node_modules
+| .package-lock.json
+
+🌐 Ver el proyecto en línea: 👉 https://web-project-around-express.onrender.com
+
 ## Autor
+
 Carlos Durán
+
+```
+
 ```
