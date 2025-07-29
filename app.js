@@ -17,7 +17,11 @@ app.use("/cards", cardsRouter);
 app.get("/", (req, res) => {
   res.status(200).json({
     message: "API de Carlos Durán funcionando correctamente 🚀",
-    endpoints: ["/users", "/users/:id", "/cards"],
+    endpoints: {
+      users: "/users",
+      userById: "/users/:id",
+      cards: "/cards",
+    },
   });
 });
 
