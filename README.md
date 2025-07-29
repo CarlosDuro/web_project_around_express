@@ -93,11 +93,15 @@ El manejo de errores está implementado para rutas no encontradas y usuarios ine
 +---node_modules
 | .package-lock.json
 
+```
+
 🌐 Ver el proyecto en línea: 👉 https://web-project-around-express.onrender.com
 
 ## Autor
 
 Carlos Durán
+
+```
 
 ```
 
