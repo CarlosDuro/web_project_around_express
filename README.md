@@ -60,7 +60,7 @@ npm run dev
 
 Ejemplo de id http://localhost:3000/users/8340d0ec33270a25f2413b69
 
-```
+
 
 ## Dependencias principales
 
