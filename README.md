@@ -78,6 +78,7 @@ El manejo de errores está implementado para rutas no encontradas y usuarios ine
 
 # Estructura del Proyecto
 
+```bash
 | .editorconfig
 | .eslintrc
 | .gitignore
@@ -100,9 +101,3 @@ El manejo de errores está implementado para rutas no encontradas y usuarios ine
 ## Autor
 
 Carlos Durán
-
-```
-
-```
-
-```
