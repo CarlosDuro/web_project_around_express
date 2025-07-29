@@ -13,16 +13,9 @@ app.use(express.json());
 app.use("/users", usersRouter);
 app.use("/cards", cardsRouter);
 
-// Ruta raíz con mensaje de bienvenida y lista de endpoints
+// Ruta raíz que redirige a /cards
 app.get("/", (req, res) => {
-  res.status(200).json({
-    message: "API de Carlos Durán funcionando correctamente 🚀",
-    endpoints: {
-      users: "/users",
-      userById: "/users/:id",
-      cards: "/cards",
-    },
-  });
+  res.redirect("/cards");
 });
 
 // Manejar rutas no definidas
