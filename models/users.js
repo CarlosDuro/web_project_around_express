@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const urlRegex =
-  /^(https?:\/\/)(www\.)?([\w\-\.~%]+)+(:\d+)?(\/[\w\-._~:/?#[\]@!$&'()*+,;=%]*)?#?$/;
+// Regex para validar URLs (http, https, con o sin www, puertos opcionales, rutas y queries)
+const urlRegex = /^(https?:\/\/)(www\.)?[\w\-\.~%]+(:\d+)?(\/[\w\-._~:/?#[\]@!$&'()*+,;=%]*)?$/;
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -26,4 +26,4 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("user", userSchema);
+module.exports = mongoose.model("User", userSchema, "users");

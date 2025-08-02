@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 
+// Regex para validar URLs (http, https, con o sin www, puertos opcionales, rutas y queries)
 const urlRegex =
-  /^https?:\/\/(www\.)?[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})(\/[\w\-._~:/?#[\]@!$&'()*+,;=]*)*#?$/;
+  /^(https?:\/\/)(www\.)?[a-zA-Z0-9\-\.~%]+(:\d+)?(\/[\w\-._~:/?#[\]@!$&'()*+,;=%]*)?$/;
 
 const cardSchema = new mongoose.Schema({
   name: {
@@ -14,9 +15,7 @@ const cardSchema = new mongoose.Schema({
     type: String,
     required: true,
     validate: {
-      validator: function (v) {
-        return urlRegex.test(v);
-      },
+      validator: (v) => urlRegex.test(v),
       message: (props) =>
         `${props.value} no es un enlace válido para la imagen.`,
     },
@@ -24,12 +23,12 @@ const cardSchema = new mongoose.Schema({
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
-    ref: "user",
+    ref: "User", // Referencia al modelo User (con mayúscula)
   },
   likes: {
     type: [mongoose.Schema.Types.ObjectId],
     default: [],
-    ref: "user",
+    ref: "User",
   },
   createdAt: {
     type: Date,
@@ -37,4 +36,4 @@ const cardSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("card", cardSchema);
+module.exports = mongoose.model("Card", cardSchema);
