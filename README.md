@@ -91,6 +91,39 @@ npm run dev
 
 Ejemplo de id http://localhost:3000/users/688c0b2f3c44171411df54b9
 
+## Probar API en línea con Postman
+
+La API también está desplegada en Render:
+
+🔗 https://web-project-around-express-api.onrender.com
+
+Endpoints para probar
+Método Endpoint Descripción
+GET /users Obtener todos los usuarios
+GET /cards Obtener todas las tarjetas
+POST /cards Crear una nueva tarjeta
+PATCH /users/me Actualizar perfil del usuario
+PATCH /users/me/avatar Actualizar avatar del usuario
+PUT /cards/:cardId/likes Dar like a una tarjeta
+DELETE /cards/:cardId/likes Quitar like de una tarjeta
+DELETE /cards/:cardId Eliminar una tarjeta
+
+Actualmente, las peticiones simulan un usuario autenticado con el siguiente ID fijo:
+
+req.user = { \_id: "688c07d7a147f1c323b5ccaf" };
+
+Ejemplo: Crear usuario
+POST
+https://web-project-around-express-api.onrender.com/users
+
+Body (JSON):
+
+{
+"name": "Ada Lovelace",
+"about": "Mathematician, writer",
+"avatar": "https://www.biography.com/.image/t_share/MTE4MDAzNDEwODQwOTQ2MTkw/ada-lovelace-20825279-1-402.jpg"
+}
+
 ## Dependencias principales
 
 Express — Framework para servidor HTTP.
